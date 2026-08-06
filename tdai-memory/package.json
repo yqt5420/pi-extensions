@@ -1,0 +1,51 @@
+{
+  "name": "@yqt5421/pi-tdai-memory",
+  "version": "0.4.0",
+  "description": "MemoryCore (TencentDB Agent Memory) long-term memory extension for pi coding agent: L0 conversations, L1 atomic memory, L2 scenes, L3 persona, team skills and knowledge base (LLM wiki) with auto-capture/recall hooks. Supports direct-connect and Gateway auth modes.",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-coding-agent",
+    "extension",
+    "memory",
+    "long-term-memory",
+    "agent-memory",
+    "tencentdb",
+    "tdai",
+    "tdai-memory",
+    "gateway",
+    "skills",
+    "wiki",
+    "knowledge-base"
+  ],
+  "license": "MIT",
+  "author": "yqt5421",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yqt5420/pi-extensions.git"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.ts",
+    "lib/",
+    "README.md",
+    "config.example.json"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "check": "node --check index.ts && node --check lib/*.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

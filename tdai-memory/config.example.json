@@ -1,0 +1,21 @@
+{
+  "endpoint": "http://your-host:8420",
+  "apiKey": "",
+  "gatewayToken": "",
+  "serviceId": "default",
+  "teamId": "",
+  "userId": "",
+  "fixedAgentId": "",
+  "projectAgent": true,
+  "recall": {
+    "maxResults": 5,
+    "includePersona": true,
+    "includeSceneNav": true
+  },
+  "capture": {
+    "enabled": true
+  },
+  "wiki": {
+    "enabled": false
+  }
+}
