@@ -1,0 +1,41 @@
+{
+  "name": "@yqt5421/pi-token-speed",
+  "version": "1.1.0",
+  "description": "Real-time token speed display for pi coding agent (TTFT + tokens/sec in the footer)",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "extension",
+    "token",
+    "speed",
+    "streaming",
+    "telemetry"
+  ],
+  "license": "MIT",
+  "author": "yqt5421",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yqt5420/pi-extensions.git"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "extensions"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "check": "node --check extensions/token-speed.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  }
+}
