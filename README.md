@@ -10,6 +10,8 @@
 | [token-speed](token-speed/) | `@yqt5421/pi-token-speed` | 1.1.0 | 实时显示 token 生成速度（TTFT + tokens/sec） |
 | [tdai-memory](tdai-memory/) | `@yqt5421/pi-tdai-memory` | 0.4.0 | MemoryCore 长期记忆扩展（L0~L3、团队技能库、知识库） |
 | [pi-plan-mode-cn](pi-plan-mode-cn/) | `@yqt5421/pi-plan-mode-cn` | 0.49.3-cn.1 | Codex 式只读 /plan 协作模式（中文界面，fork 自 @narumitw/pi-plan-mode） |
+| [pi-subagents-cn](pi-subagents-cn/) | `@yqt5421/pi-subagents-cn` | 0.49.3-cn.1 | 子代理管理（中文界面，fork 自 @narumitw/pi-subagents） |
+| [pi-goal-cn](pi-goal-cn/) | `@yqt5421/pi-goal-cn` | 0.49.5-cn.1 | 目标管理（中文界面，fork 自 @narumitw/pi-goal） |
 
 ## 发布机制
 
