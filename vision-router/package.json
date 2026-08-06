@@ -1,0 +1,36 @@
+{
+  "name": "pi-vision-router",
+  "version": "1.0.0",
+  "description": "Vision channel auto-maintenance and intelligent routing for pi — read images with any model",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "extension",
+    "vision",
+    "image",
+    "routing",
+    "multimodal",
+    "fallback"
+  ],
+  "license": "MIT",
+  "author": "yqt5420",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "extensions"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "check": "node --check extensions/vision-router.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  }
+}
