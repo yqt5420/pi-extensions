@@ -1,5 +1,5 @@
 {
-  "name": "pi-vision-router",
+  "name": "@yqt5420/vision-router",
   "version": "1.0.0",
   "description": "Vision channel auto-maintenance and intelligent routing for pi — read images with any model",
   "type": "module",

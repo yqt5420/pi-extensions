@@ -1,8 +1,8 @@
-# pi-vision-router
+# @yqt5420/vision-router
 
 > 让任何模型都能“看图” —— pi 视觉通道自动维护 + 智能路由扩展
 
-`pi-vision-router` 是 [pi](https://pi.dev) 的扩展。它自动扫描你当前可用的全部模型，**实测**每个模型是否真的支持图片输入，维护一份“可用视觉通道”清单；当主模型无法读取图片时，自动把图片交给清单里的视觉模型识别，并支持外部免费通道兜底。
+`@yqt5420/vision-router` 是 [pi](https://pi.dev) 的扩展。它自动扫描你当前可用的全部模型，**实测**每个模型是否真的支持图片输入，维护一份“可用视觉通道”清单；当主模型无法读取图片时，自动把图片交给清单里的视觉模型识别，并支持外部免费通道兜底。
 
 ## 特性
 
@@ -18,13 +18,13 @@
 ### 方式一：npm（推荐，国内访问稳定）
 
 ```bash
-pi install npm:pi-vision-router
+pi install npm:@yqt5420/vision-router
 ```
 
 ### 方式二：本地路径
 
 ```bash
-pi install /path/to/pi-vision-router
+pi install /path/to/@yqt5420/vision-router
 ```
 
 安装后重启 pi（或 `/reload`），会话启动时会看到类似提示：
@@ -140,7 +140,7 @@ export AGNES_API_KEY="你的 key"
 ## 开发
 
 ```bash
-cd pi-vision-router
+cd @yqt5420/vision-router
 npm install        # 安装 typebox 等（可选，pi 会自带核心包）
 ```
 
