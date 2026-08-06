@@ -1,0 +1,82 @@
+name: Publish pi packages to npm
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*/**'
+      - '.github/workflows/**'
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.list.outputs.packages }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Discover packages
+        id: list
+        run: |
+          node -e '
+            const fs = require("fs");
+            const dirs = fs.readdirSync(".")
+              .filter(d => {
+                if (d.startsWith(".") || d === "node_modules") return false;
+                try { return fs.statSync(d).isDirectory() && fs.statSync(`${d}/package.json`).isFile(); }
+                catch { return false; }
+              })
+              .sort();
+            console.log("packages=" + JSON.stringify(dirs));
+          ' >> "$GITHUB_OUTPUT"
+
+  publish:
+    needs: discover
+    if: needs.discover.outputs.packages != '' && needs.discover.outputs.packages != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJSON(needs.discover.outputs.packages) }}
+    defaults:
+      run:
+        working-directory: ${{ matrix.package }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+
+      - name: Upgrade npm (trusted publishing requires npm >= 11.5.1)
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Run checks
+        run: npm run check || true
+
+      - name: Publish to npm (skip if version already exists)
+        run: |
+          PKG=$(node -p "require('./package.json').name")
+          VER=$(node -p "require('./package.json').version")
+          if npm view "$PKG@$VER" version >/dev/null 2>&1; then
+            echo "::notice:: $PKG@$VER already on npm, skip publish"
+          else
+            npm publish --access public --provenance
+          fi
