@@ -6,7 +6,7 @@
 
 | 插件 | npm 包名 | 说明 |
 |------|----------|------|
-| [vision-router](vision-router/) | `@yqt5420/vision-router` | 视觉通道自动维护与智能路由，让任何模型都能识图 |
+| [vision-router](vision-router/) | `@yqt5421/vision-router` | 视觉通道自动维护与智能路由，让任何模型都能识图 |
 
 ## 发布机制
 
