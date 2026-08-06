@@ -15,6 +15,13 @@
   ],
   "license": "MIT",
   "author": "yqt5420",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yqt5420/pi-extensions.git"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
   "engines": {
     "node": ">=18"
   },
