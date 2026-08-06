@@ -9,6 +9,7 @@
 | [vision-router](vision-router/) | `@yqt5421/vision-router` | 1.0.2 | 视觉通道自动维护与智能路由，让任何模型都能识图 |
 | [token-speed](token-speed/) | `@yqt5421/pi-token-speed` | 1.1.0 | 实时显示 token 生成速度（TTFT + tokens/sec） |
 | [tdai-memory](tdai-memory/) | `@yqt5421/pi-tdai-memory` | 0.4.0 | MemoryCore 长期记忆扩展（L0~L3、团队技能库、知识库） |
+| [pi-plan-mode-cn](pi-plan-mode-cn/) | `@yqt5421/pi-plan-mode-cn` | 0.49.3-cn.1 | Codex 式只读 /plan 协作模式（中文界面，fork 自 @narumitw/pi-plan-mode） |
 
 ## 发布机制
 

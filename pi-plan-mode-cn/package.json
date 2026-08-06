@@ -1,0 +1,53 @@
+{
+  "name": "@yqt5421/pi-plan-mode-cn",
+  "version": "0.49.3-cn.1",
+  "description": "中文界面版 Plan mode：Codex-like 只读 /plan 协作模式（fork 自 @narumitw/pi-plan-mode，操作提示全部中文化）。Chinese-localized fork of pi-plan-mode with all user-facing prompts translated.",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-coding-agent",
+    "extension",
+    "plan",
+    "plan-mode",
+    "planning",
+    "chinese",
+    "zh-cn",
+    "i18n",
+    "localization"
+  ],
+  "license": "MIT",
+  "author": "yqt5421",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yqt5420/pi-extensions.git"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@narumitw/pi-tui-kit": "^0.49.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "scripts": {
+    "check": "esbuild src/index.ts --bundle --format=esm --platform=node --outfile=/dev/null --external:@earendil-works/* --external:@narumitw/pi-tui-kit --external:@earendil-works/pi-tui",
+    "translate": "node scripts/translate.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}
