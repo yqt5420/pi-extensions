@@ -1,0 +1,47 @@
+{
+  "name": "@yqt5421/pi-newapi",
+  "version": "0.1.0",
+  "description": "Auto-discover models, pricing, and reasoning compatibility for any OpenAI-compatible NewAPI / one-api gateway",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-coding-agent",
+    "extension",
+    "newapi",
+    "one-api",
+    "openai-compatible",
+    "model-discovery",
+    "pricing"
+  ],
+  "license": "MIT",
+  "author": "yqt5421",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yqt5420/pi-extensions.git"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "check": "node --experimental-strip-types --check extensions/index.ts",
+    "smoke": "node --experimental-strip-types test/smoke.mjs"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  }
+}

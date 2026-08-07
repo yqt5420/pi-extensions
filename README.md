@@ -12,6 +12,7 @@
 | [pi-plan-mode-cn](pi-plan-mode-cn/) | `@yqt5421/pi-plan-mode-cn` | 0.49.3-cn.1 | Codex 式只读 /plan 协作模式（中文界面，fork 自 @narumitw/pi-plan-mode） |
 | [pi-subagents-cn](pi-subagents-cn/) | `@yqt5421/pi-subagents-cn` | 0.49.3-cn.1 | 子代理管理（中文界面，fork 自 @narumitw/pi-subagents） |
 | [pi-goal-cn](pi-goal-cn/) | `@yqt5421/pi-goal-cn` | 0.49.5-cn.1 | 目标管理（中文界面，fork 自 @narumitw/pi-goal） |
+| [pi-newapi](pi-newapi/) | `@yqt5421/pi-newapi` | 0.1.0 | 自动发现 NewAPI / one-api 网关的模型、定价、推理兼容（任意 OpenAI 兼容网关通用） |
 
 ## 发布机制
 
