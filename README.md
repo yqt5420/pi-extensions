@@ -27,8 +27,8 @@
 
 1. **建目录**：`mkdir <plugin-name>`（仓库根目录下的子目录）
 2. **写 package.json**（必须包含）：
-   - `"name": "@yqt5421/<plugin-name>"`（yqt5421 scope）
-   - `"author": "yqt5421"`
+   - `"name": "@yqt5421/<plugin-name>"`（yqt5421 npm scope）
+   - `"author": "yqt5420"`（GitHub 用户名，**不是** npm scope；provenance 身份校验必需，写错会 404）
    - `"repository": { "type": "git", "url": "https://github.com/yqt5420/pi-extensions.git" }`（provenance 校验必需，缺失会 E422）
    - `"publishConfig": { "provenance": true }`
    - `"pi": { "extensions": [...] }` + `"keywords": ["pi", "pi-package"]`
